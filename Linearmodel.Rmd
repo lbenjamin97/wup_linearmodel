@@ -1,0 +1,32 @@
+---
+title: "Linearmodel"
+
+name: "Leetambra Benjamin"
+
+date: "Summer 2025"
+
+output: html_document
+---
+
+```{r}
+ Data <-read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_strength/data.txt" ,sep="",header=TRUE)
+```
+
+```{r}
+simp <- lm (SIMS~ARM,data=Data)
+plot(SIMS~ARM,data=Data)
+abline(simp)
+summary.lm(simp)
+```
+
+
+```{r}
+ARMGRIP <- data.frame(ARM = 88, GRIP = 94)
+``` 
+
+
+ 
+                      
+                      
+                      
+                      
