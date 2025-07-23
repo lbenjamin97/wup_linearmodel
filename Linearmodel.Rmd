@@ -8,8 +8,11 @@ date: "Summer 2025"
 output: html_document
 ---
 
-```{r}
- Data <-read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_strength/data.txt" ,sep="",header=TRUE)
+```{r include=FALSE}
+require(knitr)
+require(tidyverse)
+require(tigerstats)
+Data <-read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_strength/data.txt" ,sep="",header=TRUE)
 ```
 
 ```{r}
@@ -20,9 +23,13 @@ summary.lm(simp)
 ```
 
 
+
+
 ```{r}
-ARMGRIP <- data.frame(ARM = 88, GRIP = 94)
+target<-data.frame(ARM=88, GRIP=94)
 ``` 
+
+
 
 
  
